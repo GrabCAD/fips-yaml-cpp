@@ -1,0 +1,8 @@
+#
+# basic test of fips-yaml-cpp
+#
+---
+imports:
+  fips-yaml-cpp:
+    git:  https://github.com/MODit3D/fips-yaml-cpp.git
+
