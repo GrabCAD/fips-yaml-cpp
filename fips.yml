@@ -1,0 +1,8 @@
+#
+# fips-yaml-cpp
+#
+---
+exports:
+  header-dirs: [yaml-cpp/include]
+  modules:
+    yaml-cpp: yaml-cpp
