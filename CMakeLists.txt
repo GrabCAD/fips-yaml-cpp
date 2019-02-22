@@ -15,8 +15,14 @@ if (NOT FIPS_IMPORT)
     set(FIPS_EXCEPTIONS ON CACHE BOOL "Enable C++ exceptions" FORCE)
 
     fips_setup()
-    fips_project(fips-yaml-cpp)
-    fips_add_subdirectory(yaml-cpp)   
+        fips_project(fips-yaml-cpp)
+
+        option(YAML_CPP_BUILD_TESTS "Enable testing" OFF)
+        option(YAML_CPP_BUILD_TOOLS "Enable parse tools" OFF)
+        option(YAML_CPP_BUILD_CONTRIB "Enable contrib stuff in library" ON)
+        option(YAML_CPP_INSTALL "Enable generation of install target" OFF)
+
+        fips_add_subdirectory(yaml-cpp)   
     fips_finish()
     
 endif()
