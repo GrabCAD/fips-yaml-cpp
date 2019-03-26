@@ -22,6 +22,8 @@ if (NOT FIPS_IMPORT)
         option(YAML_CPP_BUILD_CONTRIB "Enable contrib stuff in library" ON)
         option(YAML_CPP_INSTALL "Enable generation of install target" OFF)
 
+	set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build Shared Libraries")
+
         fips_add_subdirectory(yaml-cpp)   
     fips_finish()
     
