@@ -16,15 +16,12 @@ if (NOT FIPS_IMPORT)
 
     fips_setup()
         fips_project(fips-yaml-cpp)
-
-        option(YAML_CPP_BUILD_TESTS "Enable testing" OFF)
-        option(YAML_CPP_BUILD_TOOLS "Enable parse tools" OFF)
-        option(YAML_CPP_BUILD_CONTRIB "Enable contrib stuff in library" ON)
-        option(YAML_CPP_INSTALL "Enable generation of install target" OFF)
-
-	set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build Shared Libraries")
-
-        fips_add_subdirectory(yaml-cpp)   
+        set(YAML_CPP_BUILD_TESTS OFF)
+        set(YAML_CPP_BUILD_TOOLS OFF)
+        set(YAML_CPP_BUILD_CONTRIB OFF)
+        set(YAML_CPP_INSTALL OFF)
+	set(BUILD_SHARED_LIBS OFF)
+	fips_add_subdirectory(yaml-cpp)
     fips_finish()
     
 endif()
